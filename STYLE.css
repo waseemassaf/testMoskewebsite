@@ -1,0 +1,1149 @@
+/* Importera typsnitt från Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&family=Open+Sans:wght@300;600&family=Oswald:wght@200&display=swap');
+
+
+
+
+
+/* ---------------------------------------INSTÄLLNINGAR FÖR SKÄRMEN (KODEN BÖRJAR)------------------------------------- */
+
+/* Återställ marginaler och padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala storlek */
+}
+
+
+/* Body inställningar */
+body {
+    max-width: 100vw; /* Begränsa bredden till viewportens bredd */
+    overflow-x: hidden; /* Döljer horisontellt rullningsfält */
+    font-family: Arial, sans-serif; /* Standard teckensnitt */
+}
+
+
+
+/* Flexbox inställningar för centrerat innehåll */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Full bredd av viewporten */
+    max-width: 100vw; /* Förhindra överflödig bredd */
+}
+
+/* ---------------------------------------INSTÄLLNINGAR FÖR SKÄRMEN (KODEN SLUTAR)------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------KOD FÖR MENY TRE STRECK UNDER VARANDRA (KODEN STARTAS)------------------------------------------------------------------------------------ */
+
+/* Dölj checkboxen så att den inte syns på sidan */
+.menu-toggle {
+    display: none; /* Gör så att checkboxen inte visas */
+}
+
+/* Container för menyn och knappen */
+.menu-container {
+    position: relative; /* Gör det möjligt att positionera menyn i förhållande till denna container */
+}
+
+/* Stil för menyknappen */
+.menu-btn {
+    background: #f3c75f; /* Bakgrundsfärg på knappen */
+    border: none; /* Ingen kantlinje runt knappen */
+    cursor: pointer; /* Ändra markören till en pekare när du hovrar över knappen */
+    display: flex; /* Använd flexbox för att ordna innehållet i knappen */
+    flex-direction: column; /* Ordna strecken i en kolumn */
+    gap: 1px; /* Mellanrum mellan strecken */
+    padding: auto; /* Inre marginal runt knappen */
+
+
+    top: 50%; /* Placera den i mitten av skärmen vertikalt, du kan justera detta värde efter behov */
+    width: 6100%; /* Gör linjen lika bred som skärmen */
+    height: 80px; /* Höjd på linjen */
+    height:63px;
+
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala storlek */
+}
+
+
+
+
+/* Stil för strecken på knappen */
+.menu-btn .bar {
+    width: 40px; /* Bredd på strecken */
+    height: 6px; /* Höjd på strecken */
+    background-color: #000000; /* Färg på strecken */
+    margin-left: 0px; /* Justera strecken till vänster */
+    left:100px;
+    margin-left:10px;
+    margin-top:8px;
+
+}
+
+
+/* Stil för menyn */
+.menu {
+    max-height: 0; /* Döljer menyn genom att sätta max-höjd till 0 */
+    overflow: hidden; /* Döljer allt som inte får plats i menyn */
+    opacity: 0; /* Gör menyn osynlig */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Gör att menyn öppnas/stängs långsamt */
+    display: flex; /* Gör menyn till en flexbox */
+    flex-direction: column; /* Ordna länkarna i en kolumn */
+    position: absolute; /* Placera menyn i förhållande till containern */
+    top: 60px; /* Placera menyn 60px nedanför knappen */
+    width: 250px; /* Gör menyn bredare */
+    background-color: rgb(146, 91, 91); /* Bakgrundsfärg på menyn */
+    border: 2px solid #ccc; /* Kantlinje runt menyn */
+    padding: 10px; /* Inre marginal runt menyn */
+}
+
+/* Stil för varje länk i menyn */
+.menu a {
+    display: block; /* Gör varje länk till ett block så att de täcker hela ytan */
+    padding: 15px; /* Inre marginal runt varje länk */
+    margin-bottom: 5px; /* Mellanrum mellan varje länk */
+    color: #fff; /* Vit textfärg för länkarna */
+    text-decoration: none; /* Ta bort understrykningen på länkarna */
+    border-radius: 5px; /* Rundade hörn på varje länk */
+    background-color: #333; /* Bakgrundsfärg för varje länk */
+    transition: background-color 0.3s; /* Gör att bakgrundsfärgen ändras smidigt vid hovring */
+}
+
+/* Stil för länkar vid hovring */
+.menu a:hover {
+    background-color: #555; /* Ändrar bakgrundsfärgen när du hovrar över en länk */
+}
+
+/* Visa menyn när checkboxen är markerad */
+.menu-toggle:checked + .menu-btn + .menu {
+    max-height: 500px; /* Sätt en tillräcklig höjd så att menyn syns */
+    opacity: 1; /* Gör menyn synlig */
+}
+
+
+
+
+
+
+/*-----------------------FACEBOOK+INSTA LÄNKADE BILDERS KODER (BÖRJAR)----------------------------------------*/
+
+/*LINKED IMAGEEEEEEEEEE*/
+.container {
+    display: flex;
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    height: 100vh; /* Full höjd på viewporten */
+    margin-right:-1400px;
+    position:center;
+}
+
+.linked-image {
+    width: 40px; /* Bredd på bilden */
+    height: 40px;; /* Behåll bildens proportioner */
+    border: 2px solid #907841; /* Kantlinje runt bilden */
+    border-radius: 10px; /* Rundade hörn */
+    transition: transform 0.3s ease; /* Lägger till en transition för skalningseffekt */
+    margin-right:20px;
+    margin-top:-405px;
+
+}
+
+.linked-image:hover {
+    margin-top: 500px;
+    transform: scale(1.1); /* Skalar upp bilden vid hovring */
+
+
+}
+
+.linked-image2 {
+    width: 40px; /* Bredd på bilden */
+    height: 40px;; /* Behåll bildens proportioner */
+    border: 2px solid #907841; /* Kantlinje runt bilden */
+    border-radius: 10px; /* Rundade hörn */
+    transition: transform 0.3s ease; /* Lägger till en transition för skalningseffekt */
+    margin-right:37px;
+    margin-top:-405px;
+
+}
+/*-----------------------FACEBOOK+INSTA LÄNKADE BILDERS KODER (SLUTAR)----------------------------------------*/
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------KOD FÖR MENY TRE STRECK UNDER VARANDRA (KODEN SLUTAS)------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------KODEN FÖR DEN BRUNA RADEN SOM INNEHÅLLER LOGOBILD (KODEN BÖRJAR)------------------------------------- */
+
+.horizontal-line {
+    top: 50%; /* Placera den i mitten av skärmen vertikalt, du kan justera detta värde efter behov */
+    width: 100%; /* Gör linjen lika bred som skärmen */
+    height: 80px; /* Höjd på linjen */
+    background-color:rgb(72, 31, 31); /* Färg på linjen */
+    margin-top:-712px;
+}
+
+
+
+.logopic{
+    
+    max-width: auto; /* Justera storleken efter dina önskemål */
+    width: 50px; /*Justerar bredden på bilden efter våra önskemål */
+    height: 50px; /* Justera höjden på bilden efter dina önskemål (gör auto eller 100px tex */
+    margin-bottom: 10px; /* Öka avståndet mellan varje stycke */
+    margin-top:-60px;
+
+    border-radius: 200px; /* Rundade hörn på rutan */
+    margin-left:10px;
+
+}
+
+.logorubrik{
+    color:rgb(255, 255, 255);
+    font-size: 14px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-left:73px;
+    margin-top:-50px;
+
+
+}
+
+/* ---------------------------------------KODEN FÖR DEN BRUNA RADEN SOM INNEHÅLLER LOGOBILD (KODEN SLUTAR)------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------- BOXERNA SOM ÄR I BRUNA RADEN (KODEN START)------------------------------------*/
+
+
+/* Stil för den blå rutan och namnet */
+.red-box {
+    position: absolute; /* Positionerar elementet exakt */
+    top: 83px; /* Avstånd från toppen av föräldraelementet */
+    left:1350px; /* Avstånd från vänster kant */
+    width: 120px; /* Bredd på rutan */
+    height: 38px; /* Höjd på rutan */
+    background-color: #bd0202; /* Blå bakgrundsfärg */
+    color: #ffffff; /* Vit textfärg */
+    padding: 10px; /* Inre fyllning */
+    border-radius: 6px; /* Rundade hörn på rutan */
+
+
+
+}
+
+.red-box .name {
+    font-size: 15px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-top: 0.5px; /* Avstånd ovanför texten */
+    margin-bottom: 5px; /* Avstånd under texten */
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+
+
+
+
+
+
+
+/* Stil för den blå rutan och namnet */
+.green-box {
+    position: absolute; /* Positionerar elementet exakt */
+    top: 83px; /* Avstånd från toppen av föräldraelementet */
+    left:1200px; /* Avstånd från vänster kant */
+    width: 120px; /* Bredd på rutan */
+    height: 38px; /* Höjd på rutan */
+    background-color: #25b52e; /* Blå bakgrundsfärg */
+    color: #ffffff; /* Vit textfärg */
+    padding: 10px; /* Inre fyllning */
+    border-radius: 6px; /* Rundade hörn på rutan */
+
+}
+
+.green-box .name {
+    font-size: 15px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-top: 0.5px; /* Avstånd ovanför texten */
+    margin-bottom: 5px; /* Avstånd under texten */
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+
+
+.pink-box {
+    position: absolute; /* Positionerar elementet exakt */
+    top: 83px; /* Avstånd från toppen av föräldraelementet */
+    left:1050px; /* Avstånd från vänster kant */
+    width: 120px; /* Bredd på rutan */
+    height: 38px; /* Höjd på rutan */
+    background-color: #d866aa; /* Blå bakgrundsfärg */
+    color: #ffffff; /* Vit textfärg */
+    padding: 10px; /* Inre fyllning */
+    border-radius: 6px; /* Rundade hörn på rutan */
+
+}
+
+.pink-box .name {
+    font-size: 15px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-top: 0.5px; /* Avstånd ovanför texten */
+    margin-bottom: 5px; /* Avstånd under texten */
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+
+
+
+.black2-box {
+    position: absolute; /* Positionerar elementet exakt */
+    top: 83px; /* Avstånd från toppen av föräldraelementet */
+    left:900px; /* Avstånd från vänster kant */
+    width: 120px; /* Bredd på rutan */
+    height: 38px; /* Höjd på rutan */
+    background-color: #000000; /* Blå bakgrundsfärg */
+    color: #ffffff; /* Vit textfärg */
+    padding: 10px; /* Inre fyllning */
+    border-radius: 6px; /* Rundade hörn på rutan */
+
+}
+
+.black2-box .name {
+    font-size: 15px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-top: 0.5px; /* Avstånd ovanför texten */
+    margin-bottom: 5px; /* Avstånd under texten */
+    margin-left: 2px;
+    margin-right: 2px;
+    
+}
+
+
+
+
+/*------------------------------- BOXERNA SOM ÄR I BRUNA RADEN (KODEN SLUT)------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------RUBRIKEN (START)----------------------------------------*/
+.h12 {
+    color: rgb(0, 0, 0);
+    direction: ltr;
+    margin: 50px auto; /* Centrera horisontellt och sätt toppmarginal */
+    text-align: center; /* Centrera texten */
+    width: 100%; /* Tar upp hela bredden av föräldraelementet */
+    max-width: 1200px; /* Begränsa max bredden så att det inte blir för brett på stora skärmar */
+    box-sizing: border-box; /* Inkludera padding och border i elementets totala bredd */
+    margin-top:170px;
+}
+
+
+/* Inställningar för rubriker av typen h1 */
+h1 {
+    text-transform: uppercase; /* Omvandla text till versaler */
+    font-family: 'Kanit', sans-serif; /* Typsnittsfamilj */
+    font-size: 2.5rem; /* Textstorlek */
+    margin-bottom: 1.68rem; /* Avstånd från efterföljande element */
+
+}
+/*-----------------------RUBRIKEN (SLUT)----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------BILDERNAS KODAR (BÖRJAR)----------------------------------------*/
+
+
+.moskebild1{
+    width: 400px;
+    height: 400px;
+    margin-top:-110px;
+    display: block; /* Gör bilden till ett blockelement för att hantera bredden korrekt */
+    margin-bottom: 2rem; /* Avstånd från efterföljande element */
+    Border: 2px solid rgb(72, 31, 31);
+    margin-right:973px;
+
+}
+
+
+.moskebild2{
+    width: 400px;
+    height: 400px;
+    margin-top:-432px;
+    display: block; /* Gör bilden till ett blockelement för att hantera bredden korrekt */
+    margin-bottom: 2rem; /* Avstånd från efterföljande element */
+    Border: 2px solid rgb(72, 31, 31);
+    margin-right:556px;
+}
+
+
+.moskebild3{
+    width: 400px;
+    height: 400px;
+    margin-top:-432px;
+    display: block; /* Gör bilden till ett blockelement för att hantera bredden korrekt */
+    margin-bottom: 2rem; /* Avstånd från efterföljande element */
+    Border: 2px solid rgb(72, 31, 31);
+    margin-right:140px;
+}
+
+
+.guldrad{
+    width: 800px;
+    height: 400px;
+    margin-top: -200px;
+    margin-right: 370px;
+}
+
+
+.omMoskenBilden{
+    width:150px;
+    height:150px;
+    margin-right: 520px;
+    Border: 2px solid #907841;;
+    border-radius: 200px; /* Rundade hörn på rutan */
+    margin-top:-380px;
+}
+
+/*-----------------------BILDERNAS KODAR (SLUTAR)----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stil för den blå rutan och namnet */
+.black-box {
+    position: absolute; /* Positionerar elementet exakt */
+    top: 4000px; /* Avstånd från toppen av föräldraelementet */
+    left: 0px; /* Avstånd från vänster kant */
+    width: 800px; /* Bredd på rutan */
+    height: 60px; /* Höjd på rutan */
+    color: #ed0000; /* Vit textfärg */
+    padding: 10px; /* Inre fyllning */
+    border-radius: 200px; /* Rundade hörn på rutan */
+    background-image: url('islam.png'); /* Lägg till bakgrundsbild */
+    background-size: cover; /* Gör så att bakgrundsbilden täcker hela elementet */
+    background-position: center; /* Centrerar bakgrundsbilden */
+    background-repeat: no-repeat; /* Förhindrar att bakgrundsbilden upprepas */
+
+}
+
+.black-box .name {
+    font-size: 19px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-top: 7px; /* Avstånd ovanför texten */
+    margin-bottom: 5px; /* Avstånd under texten */
+    text-align: center; /* Centrera texten */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.linkpic {
+    max-width: auto; /* Justera storleken efter dina önskemål */
+    width: 680px; /*Justerar bredden på bilden efter våra önskemål */
+    height: 120px; /* Justera höjden på bilden efter dina önskemål (gör auto eller 100px tex */
+    margin-bottom: 100px; /* Öka avståndet mellan varje stycke */
+    margin-right: 10px; /* Öka avståndet till vänster*/
+
+}
+
+
+.h12TASBIHAT {
+    color: #ea0909;
+    padding: 1px; /* Inre fyllning */
+    font-size: 2.0rem; /* Textstorlek */
+    margin: 16px auto; /* Avstånd från kanten */
+    direction: rtl;
+    margin-bottom: 2rem; /* Avstånd från efterföljande element */
+
+}
+
+
+/* Styling för h2-rubrik med fetstilt röd text */
+.hh2 {
+    color: url(WaseemAssafImg.jpg);
+    font-weight: bold; /* Fetstilt text */
+    direction: rtl;
+
+}
+
+
+
+
+.välkomnestext 
+{
+    color: #ea0909; /* Textfärg */
+    flex-direction: row; /* Horisontell riktning */
+    justify-content: space-between; /* Jämna utrymmet mellan element */
+    margin-bottom: 0.9rem; /* Avstånd från efterföljande element */
+    padding: 8px; /* Inre fyllning */
+    line-height: 1.6; /* ändra avståndet mellan raderna */
+    direction: rtl; /*alltså att texten ska börja från höger till vänster (på arabiska) */
+    font-size: 1.2rem; /* Textstorlek */
+    margin-right: 0px; /* Öka avståndet mellan varje länk */
+    margin-top:1000px;
+
+
+}
+
+
+.Y8{
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+/* -------------------------------------------------------------------------RUTORNA RÖDA OCH BLÅA (BÖRJAS)----------------------------------------------- */
+
+/* Stil för den blå rutan och namnet */
+.blue-box {
+    position: absolute; /* Positionerar elementet exakt */
+    left: 140px; /* Avstånd från vänster kant */
+    width: 700px; /* Bredd på rutan */
+    height: 430px; /* Höjd på rutan */
+    background-color: rgb(98, 72, 72); /* Blå bakgrundsfärg */
+    color: #c79a31; /* Vit textfärg */
+    padding: 10px; /* Inre fyllning */
+    border-radius: 6px; /* Rundade hörn på rutan */
+    margin-top: 30px;
+
+}
+
+.extraOM{
+    font-size: 19px; /* Textstorlek */
+    color: #907841; /* Vit textfärg */
+    direction: ltr;
+    margin-top: 20px; /* Avstånd ovanför texten */
+
+}
+
+
+.blue-box .name {
+    font-size: 19px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-left:190px;
+    margin-top: 20px; /* Avstånd ovanför texten */
+    line-height: 1.6; /* ändra avståndet mellan raderna */
+
+    margin-bottom: 5px; /* Avstånd under texten */
+
+    padding:-1000px;
+
+}
+
+.omförklaring{
+    font-size: 19px; /* Textstorlek */
+    font-weight: bold; /* Fetstil */
+    direction: ltr;
+    margin-top: 20px; /* Avstånd ovanför texten */
+    margin-bottom: 5px; /* Avstånd under texten */
+    padding:-100px;
+    margin-top:-30;
+    line-height: 1.6; /* ändra avståndet mellan raderna */
+
+
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------RUTORNA RÖDA OCH BLÅA (SLUTAS)----------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Återställ standardmarginaler, fyllningar och box-modell för alla element */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/* Ändra standardtextstorleken för hela dokumentet */
+html {
+    font-size: 100%;
+}
+
+/* Inställningar för vanliga textstycken */
+p {
+    font-size: 1.1rem; /* Textstorlek */
+    margin-bottom: 1.68rem; /* Avstånd från efterföljande element */
+    line-height: 1.6; /* ändra avståndet mellan raderna */
+    direction: rtl; /*från höger till vänster (på arabiska), alltså texten ska gå från h till v */
+    margin-bottom: 1.5rem; /* Avstånd från efterföljande element */
+
+}
+
+
+.p0{
+    font-size: 1.1rem; /* Textstorlek */
+    margin-bottom: 100rem; /* Avstånd från efterföljande element */
+    line-height: 1.6; /* ändra avståndet mellan raderna */
+    direction: rtl; /*från höger till vänster (på arabiska), alltså texten ska gå från h till v */
+    margin-bottom: 1.5rem; /* Avstånd från efterföljande element */
+
+}
+
+
+.pw
+{
+    margin-bottom: 2.5rem; /* Avstånd från efterföljande element */
+
+}
+
+
+.ps
+{
+    margin-bottom: 2.5rem; /* Avstånd från efterföljande element */
+    color:rgb(194, 176, 11);
+}
+
+
+
+
+/* Inställningar för navigationsmenyn */
+.nav {
+    display: flex; /* Flexbox-layout */
+    flex-direction: row; /* Horisontell riktning */
+    justify-content: space-between; /* Jämna utrymmet mellan element */
+    background-color: #adee66; /* Bakgrundsfärg */
+    padding: 5px; /* Inre fyllning */
+    font-size: 1.2rem; /* Textstorlek */
+    margin-bottom: 20px; /* Öka avståndet mellan varje stycke */
+    
+}
+
+
+
+/* Inställningar för länkar i navigationsmenyn */
+.nav a {
+    display: flex; 
+    text-decoration: none; /* Ingen understrykning */
+    color: #120be5; /* Textfärg */
+    font-size: 1.4rem; /* Textstorlek */
+    
+
+}
+
+
+
+
+/* Hover-effekt för länkar i navigationsmenyn */
+.nav a:hover,
+.nav a:active {
+    color: rgb(255, 0, 0); /* Ändra färgen till röd vid hover och när länken är aktiv (när vi klicker eller musen på den) */
+}
+
+
+
+
+/* Inställningar för bilder */
+img {
+    max-width: 100%; /*för att ändra den hur som helst*/
+    width: 100%; /* Sätt bildens bredd till 100% av dess container (förälderelement) */
+    display: block; /* Gör bilden till ett blockelement för att hantera bredden korrekt */
+    margin-bottom: 2rem; /* Avstånd från efterföljande element */
+
+}
+
+
+
+
+
+
+
+.o{
+    margin-bottom: 0.1rem; /* Avstånd från efterföljande element */
+}
+
+
+
+
+.välkomnestextTasbihat
+{
+    color: url(WaseemAssafImg.jpg);
+
+}
+
+
+
+
+
+
+
+.wa{
+    margin-bottom: 4rem; /* Avstånd från efterföljande element */
+
+}
+
+.C {
+    color: #044c06;
+    font-size:1.0rem;
+}
+
+.C1{
+    font-size:1.0rem;
+    margin-bottom: 70px;
+    color: #044c06;
+}
+
+
+.E{
+    color:#9f981e;
+    font-size:1.0rem;
+}
+
+
+
+.R{
+    margin-bottom: 25px; /* Öka avståndet mellan varje stycke */
+}
+
+.kontaktaossRubrik
+{
+    font-size: 1.6rem;
+    color: #ea0909;
+    font-weight: bold; /* Fetstilt text */
+    direction: rtl;
+
+}
+
+.ppp{
+    color: #ea0909;
+}
+
+.D{
+    color:#9f981e;
+    font-size:1.0rem;
+    margin-bottom: 60px; /* Öka avståndet mellan varje stycke */
+
+}
+
+.end{
+    background-color: #e0e40a; /* Bakgrundsfärg */
+
+}
+
+
+.footer {
+    background-color: #f0d508; /* Brun färg för bakgrund */
+    color: #ffffff; /* Vit textfärg */
+    padding: 35px; /* Inre fyllning för att ge utrymme åt innehållet */
+    text-align: center; /* Centrera texten horisontellt */
+    width: 100%; /* Ruta sträcker sig över hela sidan */
+    position: auto; /* För att placera rutan längst ned på sidan */
+
+}
+
+.slut{
+    margin-bottom: 60px; /* Öka avståndet mellan varje stycke */
+}
+
+
+.schemaPic{
+    max-width: auto;
+    width: auto;
+    height: auto;
+    margin-right: 180px;
+    margin-bottom: 1px;
+}
+
+.kladd{
+    margin-bottom: 50px;
+}
+
+.avstånd{
+    margin-bottom: 50px;
+}
+
+.avstånd1{
+    margin-bottom: 35px;
+    color:black
+}
+
+
+.avstånd11{
+    margin-bottom: 10px;
+    color:black
+}
+
+.avstånd2{
+    margin-bottom: 100px;
+    color:black
+}
+
+.Y{
+    color:#120be5;
+    margin-bottom: 1px; /* Öka avståndet mellan varje stycke */
+}
+
+.Y5{
+    color: rgb(1, 134, 14);
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.Y1{
+    color: rgb(1, 134, 14);
+    margin-bottom: 60px;
+}
+
+.Y2{
+    color: rgb(1, 134, 14);
+    margin-bottom: 15px;
+
+}
+
+.Y6{
+    color: rgb(140, 26, 207);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.Y7{
+    color: rgb(1, 134, 14);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.Y8{
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+
+.Y3{
+    color: rgb(1, 134, 14);
+    margin-bottom: 55px;
+}
+
+
+.SchemaRubrik{
+    color: rgb(143, 101, 5);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.Y4{
+    margin-bottom: 90px;
+    color: rgb(143, 101, 5);
+    
+}
+
+
+.avstånd3{
+    margin-bottom: 20px;
+    color: rgb(140, 26, 207);
+    font-size:1.3rem;
+
+}
+
+.avstånd112
+{
+    margin-bottom: 100px;
+    color:black
+}
+
+.avslutaDuaaSidan{
+    color: #894700;
+
+}
+
+.avslutaDuaaSidan1{
+    color: #894700;
+    margin-bottom: 100px;
+}
